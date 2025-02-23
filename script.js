@@ -169,7 +169,7 @@ async function resetScratch() {
 
 function showResult() {
     const total = totalTimes * 5;
-    document.getElementById('result').innerHTML = `！！！共计消费${total}元！！！`;
+    document.getElementById('result').innerHTML = `！！！共计消费${total+5}元！！！`;
     document.getElementById('action-btn').style.display = 'none';
 }
 
