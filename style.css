@@ -1,0 +1,101 @@
+/* style.css */
+/* 保持原样不变 */
+body {
+    background-color: #FCE5ED;
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Arial, sans-serif;
+    touch-action: none;
+}
+
+.scratch-container {
+    width: 90%;
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 10px;
+}
+
+.scratch-area {
+    position: relative;
+    width: 100%;
+    padding-bottom: 100%;
+    margin: 0 auto 15px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    border-radius: 12px;
+    overflow: hidden;
+    background: white;
+}
+
+#loading {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #666;
+    font-size: 1.2em;
+    z-index: 100;
+    display: none;
+}
+
+#prize-img,
+#scratch-canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    image-rendering: crisp-edges;
+}
+
+#scratch-canvas {
+    touch-action: none;
+}
+
+.controls {
+    text-align: center;
+    padding: 10px;
+}
+
+#action-btn {
+    padding: 12px 40px;
+    font-size: 1.1em;
+    border: none;
+    border-radius: 25px;
+    background: rgba(0, 107, 189, 0.3);
+    color: white;
+    transition: all 0.2s ease;
+    margin: 10px 0;
+}
+
+#action-btn.active {
+    background: #006BBD;
+}
+
+#action-btn:disabled {
+    opacity: 0.5;
+}
+
+#result {
+    font-size: 1.5em;
+    font-weight: bold;
+    color: #222;
+    margin: 15px 0;
+    word-break: break-all;
+}
+
+@media (max-width: 480px) {
+    #action-btn {
+        padding: 10px 30px;
+        font-size: 1em;
+    }
+    #result {
+        font-size: 1.3em;
+    }
+}
+
+* {
+    -webkit-tap-highlight-color: transparent;
+}
